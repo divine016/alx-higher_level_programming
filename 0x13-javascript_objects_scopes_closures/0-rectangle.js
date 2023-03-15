@@ -1,6 +1,6 @@
 #!/usr/bin/node
-// for rectangle rectangle
+// For rectangle rectangle
  
- class Rectangle {}
+class Rectangle {}
 
- module.exports = Rectangle;
+module.exports = Rectangle;

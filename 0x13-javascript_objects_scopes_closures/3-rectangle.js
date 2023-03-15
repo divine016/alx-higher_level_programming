@@ -1,23 +1,24 @@
 #!/usr/bin/node
-/**
- * prints a rectangle using X
- */
-class Rectangle {
-    constructor(w, h) {
-      this.height = h;
-      this.width = w;
+// Creates a module called print() to print the squares 
+ class Rectangle {
+    constructor (w, h) {
+      if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
+        this.width = w;
+        this.height = h;
+      }
     }
-    print(){
-        for(let i = 0; i< this.height; i++){
-            let start = "";
-            let y = 0;
-            if(y < this.width){
-                start += "X";
-                y++
-            }
-
-            console.log(start);
+  
+    print () {
+      for (let i = 0; i < this.height; i++) {
+        let start = '';
+        let y = 0;
+        while (y < this.width) {
+          start += 'X';
+          y++;
         }
+  
+        console.log(start);
+      }
     }
-}
-module.exports = Rectangle;
+  }
+  module.exports = Rectangle;
